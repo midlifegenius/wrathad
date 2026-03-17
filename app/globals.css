@@ -1,4 +1,71 @@
 @import 'tailwindcss';
+/* ⚡ CONSTANT FLICKER */
+@keyframes wrathFlicker {
+  0%,
+  100% {
+    filter: none;
+    opacity: 1;
+  }
+
+  /* subtle constant flicker */
+  10% {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  12% {
+    filter: none;
+  }
+
+  20% {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+  }
+
+  22% {
+    filter: none;
+  }
+
+  35% {
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+  }
+
+  37% {
+    filter: none;
+  }
+
+  /* 🔥 burn-in surge */
+  60% {
+    filter: brightness(2);
+  }
+
+  62% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 30px white);
+  }
+
+  64% {
+    filter: brightness(1.5);
+  }
+
+  66% {
+    filter: none;
+  }
+
+  /* more flicker after */
+  80% {
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  82% {
+    filter: none;
+  }
+}
+
+.wrath-logo {
+  animation: wrathFlicker 2.5s infinite linear;
+}
 
 html,
 body {
