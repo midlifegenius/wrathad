@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import SocialLinks from './SocialLinks'
+import VideoSection from './VideoSection'
 
 export default function Hero() {
   return (
@@ -36,6 +37,7 @@ export default function Hero() {
 */}
       {/* Links NOW directly under */}
       <SocialLinks />
+      <VideoSection />
     </div>
   )
 }
